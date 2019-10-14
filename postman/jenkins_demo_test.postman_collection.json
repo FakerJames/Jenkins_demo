@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "35e933e6-13b1-44b9-bf88-306c5519d03b",
+		"name": "jenkins_demo_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get method test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "928a973b-359f-4e5d-9c44-85282a517619",
+						"exec": [
+							"pm.test(\"test_get_method\", function(){",
+							"    console.log(\"start\");",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.108.136:30000/testMethod",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"108",
+						"136"
+					],
+					"port": "30000",
+					"path": [
+						"testMethod"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
