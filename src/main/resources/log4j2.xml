@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- 设置日志输出的格式 -->
+<!--            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>-->
+            <JsonLayout compact="true" locationInfo="true" complete="false" eventEol="true"/>
+
+        </Console>
+
+    </appenders>
+
+    <loggers>
+        <root level="INFO">
+            <appender-ref ref="Console"/>
+<!--            <appender-ref ref="RollingFileInfo"/>-->
+        </root>
+    </loggers>
+
+</Configuration>
