@@ -1,4 +1,4 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-ADD target/*jar app.jar
+ADD *jar app.jar
 ENTRYPOINT [ "java", "-jar", "/app.jar" ]
