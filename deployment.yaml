@@ -1,0 +1,18 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: k8s_demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: k8s_demo
+    spec:
+      containers:
+      - name: k8s_demo
+        image: k8s_demo:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+ 
