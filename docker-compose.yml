@@ -1,0 +1,8 @@
+version: '3.7'    				#撰写文档格式版本号，若不清楚请百度Docker Engine与docker-compose version 之间的关系，选择对应版本，版本号不对会报错
+service:
+  docker_demmo_docker_compose:						#项目名称，可以自定义
+    restart: always				#开机自启，表示docker启动则此容器跟着启动
+    images: daocloud.io/library/mysql:8.0.2		#指定镜像路径
+    container_name: docker_demmo_docker_compose						#指定容器的名称
+    ports:						 #配置端口
+      - 8081:8080                #指定端口的映射，-后有个空格
