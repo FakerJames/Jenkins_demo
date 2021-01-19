@@ -4,7 +4,7 @@ metadata:
   name: k8s_demo-svc
 spec:
   selector:
-    app: hello-server
+    app: k8s_demo
   ports:
   - protocol: TCP
     port: 8080
