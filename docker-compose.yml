@@ -2,7 +2,9 @@ version: '3.2'
 services:
   docker_demmo_docker_compose:
     restart: always
-    images: /var/lib/docker/overlay2
+    image: docker_demo1:latest
     container_name: docker_demmo_docker_compose
     ports:
       - 8081:8080
+    build: .
+      
