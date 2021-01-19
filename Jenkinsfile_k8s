@@ -1,0 +1,15 @@
+pipeline{
+  agent any
+  stages{
+    stage("build"){
+      steps{
+        sh "mvn install"
+       }
+    }
+    stage("deploy"){
+      steps{
+        sh "docker build -t k8s_demo . &&kubectl create -f k8s_demo.yaml &&kubectl create -f k8s_demo-svc.yaml"
+      }
+    }
+  }
+}
