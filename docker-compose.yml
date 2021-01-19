@@ -1,5 +1,5 @@
 version: '3.2'
-service:
+services:
   docker_demmo_docker_compose:
     restart: always
     images: /var/lib/docker/overlay2
